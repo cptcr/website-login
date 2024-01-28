@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <title>Register</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="cursor"></div>
+    <script src="../cursor.js"></script>
+
+    <div class="wrapper">
+        <form action="/register" method="POST">
+            <h1>Register</h1>
+
+            <div class="input-box">
+                <input type="text" placeholder="Username" name="username" required>
+                <i class='bx bx-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="email" placeholder="E-Mail" name="email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" name="password" required>
+                <i class='bx bx-lock-alt' ></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+            </div>
+
+            <button class="btn" type="submit">Register</button>
+
+            <div class="register-link">
+                <p>Already have an account? <a href="../login/index.html">Login</a></p>
+            </div>
+        </form>
+
+        <div class="btn-container">
+            <button class="discord" onclick="authenticateWithDiscord()">
+                Authenticate with Discord
+                <i class='fab fa-discord' ></i>
+            </button>
+
+            <script>
+                function authenticateWithDiscord() {
+                    const authorizationUrl = `https://discord.com/api/oauth2/authorize?client_id=1189946693999935608&response_type=code&redirect_uri=https%3A%2F%2Ftoowake.dev/auth/discord/callback&scope=identify+email`;
+
+                    window.location.href = authorizationUrl;
+                }
+
+                function authenticateWithGitHub() {
+                    const CLIENT_ID = "2e7643634631f04aa36b";
+                    const REDIRECT_URI = "https://toowake.dev/auth/github/callback";
+                    const SCOPE = "user"; 
+                    const authorizationUrl = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
+                    window.location.href = authorizationUrl;
+                }
+            </script>
+
+            <button class="github" onclick="authenticateWithGitHub()">
+                Authenticate with GitHub
+                <i class='bx bxl-github' ></i>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

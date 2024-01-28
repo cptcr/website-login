@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="help.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet"> 
+
+    <title>Toowake</title>
+
+    <meta property="og:title" content="Toowake" />
+    <meta property="og:description" content="This is my website lol" />
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/931870926797160538/2bc16b2e3f26f4e7b057e102badcbccc.webp?size=512"/>
+    <meta property="og:url" content="https://toowake.lol" />
+
+    <link rel="icon" type="image" href="https://cdn.discordapp.com/avatars/931870926797160538/2bc16b2e3f26f4e7b057e102badcbccc.webp?size=512">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleNavbar()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" alt="Menu Icon"> <!-- Update with your icon path -->
+    </div>
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#partner">Partner</a>
+        <a href="#help">Help</a>
+    </div>
+
+    <div class="cursor"></div>
+    <script src="cursor.js"></script>
+
+    <script>
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Toggle Navbar Function
+        function toggleNavbar() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
+
+    <h1 id="home">TOOWAKE</h1>
+
+    <p class=main>Hey, i am toowake. A 16 years old german dude which codes random stuff lol.</p>
+
+    <div class="card-container">
+        <div class="card-wrapper">
+            <div class="card">
+                <a class="embed-link">About myself</a>
+                <p>
+                    <li>16 years old</li>
+                    <li>lives in Germany</li>
+                    <li>owns too many domains</li>
+                    <li>loves coding and gaming</li>
+                    <li>addicted to energy drinks</li>
+                    <li>rich (Jason told me)</li>
+                </p>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <a class="embed-link">Favourite Games</a>
+                <p>
+                    <li>Valorant</li>
+                    <li>Call of Duty: Mobile</li>
+                    <li>Minecraft</li>
+                    <li>Forza Horizon 5</li>
+                </p>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <a class="embed-link">Coding Languages</a>
+                <p>
+                    <li>NodeJS</li>
+                    <li>a bit Python</li>
+                    <li>C++</li>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="title-p" id="projects">Projects</h2>
+
+    <section class="projects">
+        <div class="card-container">
+            <div class="card-wrapper">
+                <div class="card">
+                    <a href="https://panel.toowake.host" class="embed-link">
+                        Hosting Service
+                    </a>
+        
+                    <p>This is the best hosting ever, you can get there all servers that you need at the cheapest price.</p>
+                </div>
+                <a href="https://panel.toowake.host" class="button">Learn More</a>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <a href="https://toowake.lol/github/nexus" class="embed-link">
+                        Nexus Discord Bot
+                    </a>
+        
+                    <p>NEXUS is a versatile and feature-rich Discord bot designed to enhance server functionality without the need for expensive premium services. </p>  
+                </div>
+                <a href="https://toowake.lol/github/nexus" class="button">Learn More</a>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <a href="https://list.soydaddy.space" class="embed-link">
+                        OmenList
+                    </a>
+        
+                    <p>OmenList is a free platform to advertise your Discord bots and servers. We provide a simple and easy to use interface to help you get started.</p> 
+                </div>
+                <a href="https://list.soydaddy.space" class="button">Learn More</a>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <a class="embed-link" href="https://toowake.lol/github/dbd">Dashboard</a>
+
+                    <p>Discord-Dashboard is a module that allows you to create a simple Dashboard for the Discord Bot using Node.js. The module has the entire API system integrated and only requires the user to configure the necessary options. He doesn't have to write the whole API from scratch. We also allow you to choose a Theme that you can change at any time when using the module without worrying about changing the system.</p>
+                </div>
+                <a class="button" href="https://toowake.lol/github/dbd">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="title" id="partner">Partners</h2>
+
+    <section class="partner">
+        <div class="card-container">
+            <div class="card-wrapper">
+                <div class="card">
+                    <a href="https://vibeshost.com" class="embed-link">    
+                    Vibeshost
+                    </a>
+    
+                    <p>We're not just a hosting service we're your partners in online growth. From launching your first website to expanding your digital reach, we're here to help. Our commitment? Empowering your online presence with reliable, fast, and secure hosting solutions.</p>
+                    
+                </div>
+                <a class="button" href="https://vibeshost.com">Visit Site</a>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <a class="embed-link" href="https://hostinger.com/?REFERRALCODE=1TOOWAKE03">Hostinger</a>
+
+                    <p>We are a web hosting provider on a mission to bring success to everyone who goes online. We do it by constantly improving server technology, providing professional support, and making the web hosting experience seamless.</p>
+                </div>
+                <a class="button" href="https://hostinger.com/?REFERRALCODE=1TOOWAKE03">Visit Site</a>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <a class="embed-link" href="https://rdphostings.com/rdp/aff.php?aff=3006">rdphostings.com</a>
+
+                    <p>All you have to do is: fill in your credentials, choose a plan, purchase it and leave it on us to get your Free RDP Hosting instantly activated.</p>
+                </div>
+                <a class="button" href="https://rdphostings.com/rdp/aff.php?aff=3006">Visit Site</a>
+            </div>
+        </div>
+    </section>
+
+    <h2 id="help">Website created with:</h2>
+
+    <section class="help"> 
+        <p>
+            <a href="https://gist.github.com/thomasbnt/b6f455e2c7d743b796917fa3c205f812">Color Codes</a> - Discord's Color Plate
+            <a href="https://openai.com/chatgpt">ChatGPT</a> - Get instant answers, find creative inspiration, learn something new.
+        </p>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2023 Toowake Development</p>
+        <a href="https://nexus-hosting.tech/privacy-policy/">Privacy Policy</a>  <br> <a href="https://nexus-hosting.tech/tos/">Terms of Service</a>
+    </div>
+</body>
+</html>

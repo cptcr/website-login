@@ -1,0 +1,14 @@
+.help {
+    text-align: center;
+}
+
+.help a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.help a:hover {
+    color: rgb(98, 98, 255);
+    transition: 0.5s;
+}

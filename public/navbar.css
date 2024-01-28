@@ -1,0 +1,86 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(29, 29, 29, 0.8); /* semi-transparent */
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+     display: flex; /* Ensure navbar items are aligned horizontally */
+    justify-content: center; /* Center navbar items */
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Navbar */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .navbar {
+        display: none; /* Hide navbar by default */
+        position: absolute;
+        top: 0;
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .navbar.active {
+        display: block; /* Show navbar when active */
+    }
+
+    /* Menu Icon Styling */
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1001; /* Above the navbar */
+        /* Add more styling for the icon as needed */
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    /* height: 500px; Adjust height as needed */
+}
+
+/* Additional Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for Menu Icon (hidden by default) */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
